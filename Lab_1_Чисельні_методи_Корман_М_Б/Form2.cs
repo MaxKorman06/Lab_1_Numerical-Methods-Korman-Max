@@ -52,7 +52,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
             m_del = (m * m_mis) / 100;
 
-            label_m_ex.Text = "Δm = m * ∂m = " + m + " * " + m_mis + " = " + m_del;
+            label_m_ex.Text = "Δm = m * ∂m = (" + m + " * " + m_mis + ") / 100" + " = " + m_del;
 
             abs_err = (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * m_del) +
                       (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * k_mis) +
@@ -60,14 +60,15 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
             app_val = Math.Pow((m - k), 3) / Math.Sqrt(n);
 
-            rel_err = abs_err / app_val;
+            rel_err = abs_err / Math.Abs(app_val);
 
             string str_example_1 = "Δ(∫*) = |(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + m_del + " + \n + " +
                                    "|(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + k_mis + " + \n + " +
                                    "|-(" + m + " - " + k + ")^3 / 2∙" + n + "∙√" + n + "|" + "∙" + n_mis + " = " + abs_err,
 
                    str_example_2 = "∫(x*, y*, z*) = ((" + m + " - " + k + ") ^ 3) / " + "(√" + n + ") = " + app_val,
-                   str_example_3 = "∂(∫*) = " + abs_err + " / " + app_val + " =\n= " + rel_err;
+
+                   str_example_3 = "∂(∫*) = " + abs_err + " / " + Math.Abs(app_val) + " =\n= " + rel_err;
 
             label_example1.Text = str_example_1;
             label_example2.Text = str_example_2;
