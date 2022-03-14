@@ -106,7 +106,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(7, 24);
+            this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 25);
             this.label1.TabIndex = 5;
@@ -116,7 +116,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(73, 74);
+            this.label2.Location = new System.Drawing.Point(73, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 6;
@@ -136,7 +136,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(7, 111);
+            this.label4.Location = new System.Drawing.Point(7, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 25);
             this.label4.TabIndex = 8;
@@ -144,7 +144,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             // textBox_squ_d
             // 
-            this.textBox_squ_d.Location = new System.Drawing.Point(37, 116);
+            this.textBox_squ_d.Location = new System.Drawing.Point(37, 100);
             this.textBox_squ_d.Name = "textBox_squ_d";
             this.textBox_squ_d.Size = new System.Drawing.Size(44, 20);
             this.textBox_squ_d.TabIndex = 9;
@@ -153,7 +153,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(87, 111);
+            this.label5.Location = new System.Drawing.Point(87, 95);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 25);
             this.label5.TabIndex = 11;
@@ -202,7 +202,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             // textBox_squ_u
             // 
-            this.textBox_squ_u.Location = new System.Drawing.Point(116, 117);
+            this.textBox_squ_u.Location = new System.Drawing.Point(116, 101);
             this.textBox_squ_u.Name = "textBox_squ_u";
             this.textBox_squ_u.Size = new System.Drawing.Size(44, 20);
             this.textBox_squ_u.TabIndex = 18;
