@@ -48,15 +48,16 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label_func = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox_func = new System.Windows.Forms.TextBox();
-            this.button_save_func = new System.Windows.Forms.Button();
-            this.button_clear_func = new System.Windows.Forms.Button();
             this.label_m_ex = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label_example1 = new System.Windows.Forms.Label();
+            this.label_example2 = new System.Windows.Forms.Label();
+            this.label_example3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_clear
@@ -228,50 +229,11 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             // 
             this.label_func.AutoSize = true;
             this.label_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_func.Location = new System.Drawing.Point(12, 45);
+            this.label_func.Location = new System.Drawing.Point(9, 63);
             this.label_func.Name = "label_func";
-            this.label_func.Size = new System.Drawing.Size(211, 25);
+            this.label_func.Size = new System.Drawing.Size(95, 25);
             this.label_func.TabIndex = 23;
-            this.label_func.Text = "((m + n) ^3) / (n ^0,5)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(13, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(202, 20);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Введення іншої функцію?";
-            // 
-            // textBox_func
-            // 
-            this.textBox_func.Location = new System.Drawing.Point(12, 105);
-            this.textBox_func.Name = "textBox_func";
-            this.textBox_func.Size = new System.Drawing.Size(222, 20);
-            this.textBox_func.TabIndex = 26;
-            // 
-            // button_save_func
-            // 
-            this.button_save_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_save_func.Location = new System.Drawing.Point(12, 131);
-            this.button_save_func.Name = "button_save_func";
-            this.button_save_func.Size = new System.Drawing.Size(188, 27);
-            this.button_save_func.TabIndex = 27;
-            this.button_save_func.Text = "Зберегти";
-            this.button_save_func.UseVisualStyleBackColor = true;
-            this.button_save_func.Click += new System.EventHandler(this.button_save_func_Click);
-            // 
-            // button_clear_func
-            // 
-            this.button_clear_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_clear_func.Location = new System.Drawing.Point(208, 131);
-            this.button_clear_func.Name = "button_clear_func";
-            this.button_clear_func.Size = new System.Drawing.Size(26, 27);
-            this.button_clear_func.TabIndex = 28;
-            this.button_clear_func.Text = "C";
-            this.button_clear_func.UseVisualStyleBackColor = true;
-            this.button_clear_func.Click += new System.EventHandler(this.button_clear_func_Click);
+            this.label_func.Text = "(m - k)^3";
             // 
             // label_m_ex
             // 
@@ -323,20 +285,70 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             this.label14.TabIndex = 33;
             this.label14.Text = "Відносна пожибка:";
             // 
+            // label_example1
+            // 
+            this.label_example1.AutoSize = true;
+            this.label_example1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_example1.Location = new System.Drawing.Point(263, 105);
+            this.label_example1.Name = "label_example1";
+            this.label_example1.Size = new System.Drawing.Size(68, 20);
+            this.label_example1.TabIndex = 34;
+            this.label_example1.Text = "example";
+            // 
+            // label_example2
+            // 
+            this.label_example2.AutoSize = true;
+            this.label_example2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_example2.Location = new System.Drawing.Point(263, 236);
+            this.label_example2.Name = "label_example2";
+            this.label_example2.Size = new System.Drawing.Size(68, 20);
+            this.label_example2.TabIndex = 35;
+            this.label_example2.Text = "example";
+            // 
+            // label_example3
+            // 
+            this.label_example3.AutoSize = true;
+            this.label_example3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_example3.Location = new System.Drawing.Point(263, 333);
+            this.label_example3.Name = "label_example3";
+            this.label_example3.Size = new System.Drawing.Size(68, 20);
+            this.label_example3.TabIndex = 36;
+            this.label_example3.Text = "example";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(14, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 13);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "—————————————";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(25, 100);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 25);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "n^0,5";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label_example3);
+            this.Controls.Add(this.label_example2);
+            this.Controls.Add(this.label_example1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label_m_ex);
-            this.Controls.Add(this.button_clear_func);
-            this.Controls.Add(this.button_save_func);
-            this.Controls.Add(this.textBox_func);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label_func);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -384,14 +396,15 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label_func;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox_func;
-        private System.Windows.Forms.Button button_save_func;
-        private System.Windows.Forms.Button button_clear_func;
         private System.Windows.Forms.Label label_m_ex;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label_example1;
+        private System.Windows.Forms.Label label_example2;
+        private System.Windows.Forms.Label label_example3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
     }
 }

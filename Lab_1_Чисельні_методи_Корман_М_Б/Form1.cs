@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Lab_1_Чисельні_методи_Корман_М_Б
 {
      public partial class Form1 : Form
-    {
+     {
         public Form1()
         {
             InitializeComponent();
@@ -119,5 +119,5 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
             return frac;
         }
-    }
+     }
 }

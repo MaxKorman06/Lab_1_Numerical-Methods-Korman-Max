@@ -32,32 +32,47 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             textBox_n_mis.Clear();
 
             label_m_ex.Text = "example";
+            label_example1.Text = "example";
+            label_example2.Text = "example";
+            label_example3.Text = "example";
         }
 
         private void button_calculate_Click(object sender, EventArgs e)
         {
-            double m = Convert.ToDouble(textBox_m.Text), 
+            double m = Convert.ToDouble(textBox_m.Text),
                    m_mis = Convert.ToDouble(textBox_m_mis.Text),
-                   n = Convert.ToDouble(textBox_n.Text), 
-                   n_mis = Convert.ToDouble(textBox_n_mis.Text), 
-                   k = Convert.ToDouble(textBox_k.Text), 
+                   n = Convert.ToDouble(textBox_n.Text),
+                   n_mis = Convert.ToDouble(textBox_n_mis.Text),
+                   k = Convert.ToDouble(textBox_k.Text),
                    k_mis = Convert.ToDouble(textBox_k_mis.Text),
-                   m_del;
+                   m_del,
+                   app_val,
+                   abs_err,
+                   rel_err;
 
             m_del = (m * m_mis) / 100;
 
             label_m_ex.Text = "Δm = m * ∂m = " + m + " * " + m_mis + " = " + m_del;
-        }
 
-        private void button_save_func_Click(object sender, EventArgs e)
-        {
-            label_func.Text = textBox_func.Text;
-            textBox_func.Clear();
-        }
+            abs_err = (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * m_del) +
+                      (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * k_mis) +
+                      (Math.Abs(-((Math.Pow((m - k), 3)) / (2 * n * (Math.Sqrt(n)))))) * (n_mis);
 
-        private void button_clear_func_Click(object sender, EventArgs e)
-        {
-            label_func.Text = "((m + n) ^3) / (n ^0,5)";
+            app_val = Math.Pow((m - k), 3) / Math.Sqrt(n);
+
+            rel_err = abs_err / app_val;
+
+            string str_example_1 = "Δ(∫*) = |(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + m_del + " + \n + " +
+                                   "|(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + k_mis + " + \n + " +
+                                   "|-(" + m + " - " + k + ")^3 / 2∙" + n + "∙√" + n + "|" + "∙" + n_mis + " = " + abs_err,
+
+                   str_example_2 = "∫(x*, y*, z*) = ((" + m + " - " + k + ") ^ 3) / " + "(√" + n + ") = " + app_val,
+                   str_example_3 = "∂(∫*) = " + abs_err + " / " + app_val + " =\n= " + rel_err;
+
+            label_example1.Text = str_example_1;
+            label_example2.Text = str_example_2;
+            label_example3.Text = str_example_3;
+
         }
     }
 }
