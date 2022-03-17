@@ -17,12 +17,12 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             InitializeComponent();
         }
 
-        private void button_exit_Click(object sender, EventArgs e)
+        private void button_exit_Click(object sender, EventArgs e) // Кнопка виходу
         {
             Application.Exit();
         }
 
-        private void button_clear_Click(object sender, EventArgs e)
+        private void button_clear_Click(object sender, EventArgs e) // Кнопка очищення textbox та label
         {
             textBox_divd.Clear();
             textBox_divr.Clear();
@@ -42,11 +42,11 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
         private void button_calculate_Click(object sender, EventArgs e)
         {
-            double divd = Convert.ToDouble(textBox_divd.Text), 
-                   divr = Convert.ToDouble(textBox_divr.Text), 
-                   frac = Convert.ToDouble(textBox_frac.Text), 
-                   squ_d = Convert.ToDouble(textBox_squ_d.Text), 
-                   squ_u = Convert.ToDouble(textBox_squ_u.Text);
+            double divd = Convert.ToDouble(textBox_divd.Text),      // Отримання значень змінних із textbox
+                   divr = Convert.ToDouble(textBox_divr.Text),      //
+                   frac = Convert.ToDouble(textBox_frac.Text),      //
+                   squ_d = Convert.ToDouble(textBox_squ_d.Text),    //
+                   squ_u = Convert.ToDouble(textBox_squ_u.Text);    //
 
             double rep_div, rep_squ;
 
@@ -63,21 +63,21 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             rel_div = div_func(ab_squ, squ_u);
             rel_squ = div_func(ab_div, frac);
 
-            string str_example1 =  divd + " / " + divr + " = " + rep_div,
-                   str_example2 = "√" + squ_d + " = " + rep_squ,
-                   str_example3 = "Δ1 = " + rep_div + " - " + frac + " = " + ab_div,
-                   str_example4 = "Δ2 = " + rep_squ + " - " + squ_u + " = " + ab_squ,
-                   str_example5 = "∂1 = Δ1 / a1 = " + ab_div + " / " + frac + " = " + rel_squ,
-                   str_example6 = "∂2 = Δ2 / a2 = " + ab_squ + " / " + squ_u + " = " + rel_div;
+            string str_example1 =  divd + " / " + divr + " = " + rep_div,                       // Виведення всіх операцій на екран
+                   str_example2 = "√" + squ_d + " = " + rep_squ,                                //
+                   str_example3 = "Δ1 = " + rep_div + " - " + frac + " = " + ab_div,            //
+                   str_example4 = "Δ2 = " + rep_squ + " - " + squ_u + " = " + ab_squ,           //
+                   str_example5 = "∂1 = Δ1 / a1 = " + ab_div + " / " + frac + " = " + rel_squ,  //
+                   str_example6 = "∂2 = Δ2 / a2 = " + ab_squ + " / " + squ_u + " = " + rel_div; //
+                                                                                                //
+            example1.Text = str_example1;                                                       //
+            example2.Text = str_example2;                                                       //
+            example3.Text = str_example3;                                                       //
+            example4.Text = str_example4;                                                       //
+            example5.Text = str_example5;                                                       //
+            example6.Text = str_example6;                                                       //
 
-            example1.Text = str_example1;
-            example2.Text = str_example2;
-            example3.Text = str_example3;
-            example4.Text = str_example4;
-            example5.Text = str_example5;
-            example6.Text = str_example6;
-
-            if (squ_u >= 0)
+            if (squ_u >= 0) // Операція порівняння точночті виразів
             {
                 if (Math.Abs(rel_div) > Math.Abs(rel_squ))
                 {
@@ -98,12 +98,12 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             }
         }
 
-        private void button_ex2_Click(object sender, EventArgs e)
+        private void button_ex2_Click(object sender, EventArgs e) // Кнопка входу до завдання 2
         {
             Form2 fr2 = new Form2();
             fr2.Show();
         }
-        public static double div_func(double divd, double divr)
+        public static double div_func(double divd, double divr) // Функція ділення
         {
             double sum;
 
@@ -111,7 +111,7 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
             return sum;
         }
-        public static double sub_func(double red, double sub)
+        public static double sub_func(double red, double sub) // Функція віднімання
         {
             double frac;
 

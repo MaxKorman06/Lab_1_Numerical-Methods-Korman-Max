@@ -17,12 +17,12 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
             InitializeComponent();
         }
 
-        private void button_exit_Click(object sender, EventArgs e)
+        private void button_exit_Click(object sender, EventArgs e) // Кнопка виходу
         {
             this.Close();
         }
 
-        private void button_clear_Click(object sender, EventArgs e)
+        private void button_clear_Click(object sender, EventArgs e) // Кнопка очищення textbox та label
         {
             textBox_k.Clear();
             textBox_k_mis.Clear();
@@ -39,12 +39,12 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
         private void button_calculate_Click(object sender, EventArgs e)
         {
-            double m = Convert.ToDouble(textBox_m.Text),
-                   m_mis = Convert.ToDouble(textBox_m_mis.Text),
-                   n = Convert.ToDouble(textBox_n.Text),
-                   n_mis = Convert.ToDouble(textBox_n_mis.Text),
-                   k = Convert.ToDouble(textBox_k.Text),
-                   k_mis = Convert.ToDouble(textBox_k_mis.Text),
+            double m = Convert.ToDouble(textBox_m.Text),            // Отримання значень змінних із textbox
+                   m_mis = Convert.ToDouble(textBox_m_mis.Text),    //
+                   n = Convert.ToDouble(textBox_n.Text),            //
+                   n_mis = Convert.ToDouble(textBox_n_mis.Text),    //
+                   k = Convert.ToDouble(textBox_k.Text),            //
+                   k_mis = Convert.ToDouble(textBox_k_mis.Text),    //
                    m_del,
                    app_val,
                    abs_err,
@@ -54,25 +54,25 @@ namespace Lab_1_Чисельні_методи_Корман_М_Б
 
             label_m_ex.Text = "Δm = m * ∂m = (" + m + " * " + m_mis + ") / 100" + " = " + m_del;
 
-            abs_err = (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * m_del) +
-                      (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * k_mis) +
-                      (Math.Abs(-((Math.Pow((m - k), 3)) / (2 * n * (Math.Sqrt(n)))))) * (n_mis);
+            abs_err = (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * m_del) +    // Обчислення всіх операцій
+                      (Math.Abs(((3 * Math.Pow(m, 2)) - (6 * m * k) + (3 * Math.Pow(k, 2))) / (Math.Sqrt(n))) * k_mis) +    //
+                      (Math.Abs(-((Math.Pow((m - k), 3)) / (2 * n * (Math.Sqrt(n)))))) * (n_mis);                           //
+                                                                                                                            //
+            app_val = Math.Pow((m - k), 3) / Math.Sqrt(n);                                                                  //
+                                                                                                                            //
+            rel_err = abs_err / Math.Abs(app_val);                                                                          //
 
-            app_val = Math.Pow((m - k), 3) / Math.Sqrt(n);
-
-            rel_err = abs_err / Math.Abs(app_val);
-
-            string str_example_1 = "Δ(∫*) = |(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + m_del + " + \n + " +
-                                   "|(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + k_mis + " + \n + " +
-                                   "|-(" + m + " - " + k + ")^3 / 2∙" + n + "∙√" + n + "|" + "∙" + n_mis + " = " + abs_err,
-
-                   str_example_2 = "∫(x*, y*, z*) = ((" + m + " - " + k + ") ^ 3) / " + "(√" + n + ") = " + app_val,
-
-                   str_example_3 = "∂(∫*) = " + abs_err + " / " + Math.Abs(app_val) + " =\n= " + rel_err;
-
-            label_example1.Text = str_example_1;
-            label_example2.Text = str_example_2;
-            label_example3.Text = str_example_3;
+            string str_example_1 = "Δ(∫*) = |(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + m_del + " + \n + " +    // Виведення всіх операцій на екран
+                                   "|(3∙" + m + "^2" + " - 6∙" + m + "∙" + k + " + 3∙" + k + "^2) / √" + n + "|∙" + k_mis + " + \n + " +            //
+                                   "|-(" + m + " - " + k + ")^3 / 2∙" + n + "∙√" + n + "|" + "∙" + n_mis + " = " + abs_err,                         //
+                                                                                                                                                    //
+                   str_example_2 = "∫(x*, y*, z*) = ((" + m + " - " + k + ") ^ 3) / " + "(√" + n + ") = " + app_val,                                //
+                                                                                                                                                    //
+                   str_example_3 = "∂(∫*) = " + abs_err + " / " + Math.Abs(app_val) + " =\n= " + rel_err;                                           //
+                                                                                                                                                    //
+            label_example1.Text = str_example_1;                                                                                                    //
+            label_example2.Text = str_example_2;                                                                                                    //
+            label_example3.Text = str_example_3;                                                                                                    //
 
         }
     }
